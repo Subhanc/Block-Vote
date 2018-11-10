@@ -98,8 +98,10 @@ body {
 .caption { 
   width: 100%;
   max-width: 100%;
-  position: absolute;
-  top: 40%;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  left: 60px;
   z-index: 1; 
   
 }
