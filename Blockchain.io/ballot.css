@@ -1,6 +1,7 @@
 /* Ballot Page */
 .ballot {
     text-align: center;
+    font-family: 'Avenir';
 }
 
 .vertical-center {
@@ -10,4 +11,21 @@
     display: flex;
     align-items: center;
 }
+
+.button { 
+
+    color: black;
+    background-color: #FFA500;
+    border-color: #FFA500;
+}
+
+.button:hover { 
+
+    color: white;
+    background-color: bla;
+    border-color: #FFA500;
+}
+
+
+
   /* END Ballot Page */
