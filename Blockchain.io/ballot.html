@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"crossorigin="anonymous">
 </head>
 <body>
-    <form>
+    <form autocomplete="off" spellcheck="false">
 		<div class="form-check">
 			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
 			<label class="form-check-label" for="exampleRadios1">
@@ -23,7 +23,26 @@
 				Hillary Clinton
 			</label>
 		</div>
-		<input class="form-control" type="text" placeholder="Passphrase">
+		<div class="form-row">
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 1">
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 2">
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 3">
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 4">
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 5">
+				</div>
+				<div class="col">
+					<input type="text" class="form-control" placeholder="Passphrase 6">
+				</div>
+			  </div>
 		<button type="submit">Cast Ballot</button>
 	</form>
 </body>
