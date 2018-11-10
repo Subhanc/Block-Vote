@@ -1,0 +1,120 @@
+body {
+	overflow-x: hidden; /*--right gutter fix--*/
+  font-family: 'Lucida Console';
+  color: black;
+}
+
+.navbar-brand {
+  padding-left: 5%;
+}
+
+
+.navbar {
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+
+}
+
+.vote {
+  color: #FFA500; 
+}
+
+
+
+@media (min-width: 1201px) {
+.resume-navbar {
+  background-color: #4B0082;
+  border-color: #4B0082;
+  text-transform: none;
+}
+
+
+.btn-outline-success {
+  background-color: #4B0082;
+  border-color: #4B0082;
+  color: black;
+}
+
+.btn-outline-success:hover {
+  background-color:white;
+  border-color: #4B0082;
+  color: #4B0082;
+}
+
+}
+
+/* End Navigation Bar */ 
+
+/*- Landing Page-*/
+
+.home-inner { 
+  background-image: url("assets/img/landing.jpg");
+  
+ }
+ .home-inner img {
+   opacity: 0.20;
+ }
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: black;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Landing Page Title with button-*/
+
+.landingButton {
+  border-width: medium;
+  text-transform: uppercase;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.7rem;
+}
+
+.caption { 
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 40%;
+  z-index: 1; 
+  
+}
+
+.caption h4  { 
+  color: orange;
+  font-size: 1.05rem;
+  /*text-transform: uppercase;*/
+  padding-bottom: 1rem; 
+
+}
+
+ .caption h2 { 
+  color: black;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+ }
+ /* END Landing Page Title-*/
