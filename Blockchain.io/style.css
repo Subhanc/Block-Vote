@@ -2,6 +2,8 @@ body {
 	overflow-x: hidden; /*--right gutter fix--*/
   font-family: 'Lucida Console';
   color: black;
+  font-family: Avenir;
+
 }
 
 .navbar-brand {
@@ -17,7 +19,9 @@ body {
 }
 
 .vote {
-  color: #FFA500; 
+  color: #FFA500;
+  font-family: Avenir;
+ 
 }
 
 
@@ -27,6 +31,7 @@ body {
   background-color: #4B0082;
   border-color: #4B0082;
   text-transform: none;
+  
 }
 
 
@@ -109,14 +114,16 @@ body {
 .caption h4  { 
   color: orange;
   font-size: 1.05rem;
+  font-weight: bold;
   /*text-transform: uppercase;*/
   padding-bottom: 1rem; 
 
 }
 
- .caption h2 { 
+ .caption h2 {
+  font-family: Avenir;
   color: black;
   font-size: 2.4rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
  }
  /* END Landing Page Title-*/
