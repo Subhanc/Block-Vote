@@ -1,122 +1,57 @@
-<html>
+
+<!DOCTYPE html>
 <head>
-	<title>face-verify.js</title>
-	<link rel='stylesheet' href='https://machinebox.io/assets/shared/static/semantic/semantic.min.css'>
-	<link rel='stylesheet' href='https://machinebox.io/assets/shared/static/css/main.css?cb=v1.407445687013758950'>
-	<style>
-		#facePreview {
-			width: 100%;
-			float: right;
-		}
-	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js "></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title> Block Vote</title>
 </head>
-<body>
-	<div class='ui container'>
-		<div class='ui header stackable grid'>
-			<div class='five wide mobile-hide column'>
-				<a href='http://machinebox.io/'>
-					
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class='ui container'>
-		<div class='ui grid'>
-			<div class='twelve wide column'>
-				<div class='ui segment'>
-					<h2>
-						BlockVote: Face Verify
-					</h2>
-					<p>
-						Face verification works by using the webcam to monitor the individual at the ballot, and allows them to proceed. If it's not the expected person, private key information for the blockchain is hidden.
-						If multiple people are looking at the screen, this could be considered a security
-						risk, and further content is hidden.
-					</p>
-					<div class='ui divider'></div>
-					<h4>Secure content</h4>
-					<div class='ui secure message' style='background-color: black;'>
-						<p>
-							Generate private key: 
-						</p>
-					</div>
-					<p>
-						<strong>Can't see anything?</strong> Check with your ballot superviser.
-					</p>
-					<div class='ui divider'></div>
-					<h3>
+<body data-spy="scroll" data-target="#menu">
+	
+	<!-- Start Home Section -->
+	<div id="home">
+		<!-- Navagation -->
+		<nav class="navbar navbar-light navbar-expand-xl fixed-top text-capitalize">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"> Block <b class="vote"> Vote. </b></a>
+				<div class="collapse navbar-collapse" id="menu">
+					<!-- Navbar Links-->
+					<ul class="navbar-nav ml-auto">
+
+						<li class="nav-item">
+							<a class="nav-link" href="#home"> Home </a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About Us</a>
+						</li>
 						
-					</h3>
-					<p>
-					
-					</p>
-					<pre><code></code></pre>
-					<p>
-						
-					</p>
-					<p>
-						
-					</p>
-					<h3>
-						
-					</h3>
-					<p>
-						The webcam stream is used to take a snapshot at regular intervals. The snapshots are sent to
-						Facebox for analysis. If Facebox doesn't recognize the person, or if there are multuple faces
-						detected, the secure content is hidden. No webcam data is saved.
-					</p>
-				</div>
-			</div>
-			<div class='four wide column'>
-				<div class='ui fluid card'>
-					<div class='image'>
-						<video id='facePreview' autoplay></video>
-					</div>
-					<div class='content'>
-						<div class='header'>
-							Face Verify
-						</div>
-						<div class='description'>
-							<span class='status'>Please wait...</span>
-							<div class='ui error message' style='display:none'></div>
-						</div>
-					</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#myprojects"> Candidate Info</a>
+						</li>
+			</div> <!-- End Container Fluid-->
+		</nav> <!-- End of Navbar-->
+
+		<!-- Landing Page -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- 
+		<!-- Landing Page Caption -->
+		<div class="caption center-block">
+			<h2> Block <b class = "vote"> Vote.</b> </h2>
+			<h4> A decentralized and secure electoral voting platform </h4>
+			<a class="btn btn-outline-dark landingButton" href="/Users/subhan/Desktop/blockchain/Blockchain.io/ballot.html"> Cast Vote </a>
+			<a class="btn btn-outline-dark landingButton2" href="/Users/subhan/Desktop/blockchain/Blockchain.io/Authorization.html"> Authorization Portal </a>
+			<div class = "power"> Powered by the ARK Blockchain </div>
+		</div> <!-- End Home Section -->
+		<!-- Start About Section -->
+</body> <!-- End of Body -->
 
-		Note to devs:
-			jQuery isn't required for face-verify to work, we just use it on this
-			page because we like it. You can use whatever you like.
-
-	-->
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous"></script>
-	<script src='face-verify.js'></script>
-	<script>
-		var fv = new machinebox.FaceVerify({
-			facebox: "http://localhost:8080",
-			videoSelector: '#facePreview',
-			snapshotInterval: 1000,
-			error: function(error) {
-				if (!error) {
-					$('.ui.error.message').hide()
-					return
-				}
-				$('.ui.error.message').text(error).show()
-			},
-			onSecure: function(name){
-				$('.status').text("Welcome "+name)
-				$('.secure').css({backgroundColor:'white'})
-			},
-			onInsecure: function(message){
-				$('.status').text(message)
-				$('.secure').css({backgroundColor:'black'})
-			},
-		})
-		fv.start()
-	</script>
-</body>
-</html>
