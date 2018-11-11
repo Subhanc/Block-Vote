@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $('.ballot-button').click(function() {
-        alert(1);
+        //alert(1);
         $.ajax({
             type: "POST",
-            url: "https://reqres.in/api/users",
+            url: "https://reqres.in/api/register",
             data: {
-                name: "Donald J. Trump",
-                job: "POTUS"
+                email: "sydney@fife",
+                password: "pistol"
             },
             success: function(response) {
                 console.log(response);
