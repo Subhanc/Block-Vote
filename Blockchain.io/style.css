@@ -102,7 +102,7 @@ body {
 
 .power 
 {
-  padding-left: 76%;
+  padding-left: 77%;
   opacity: 0.5;
 }
 .caption { 
@@ -117,7 +117,7 @@ body {
 }
 
 .caption h4  { 
-  color: orange;
+  color: #FFA500;
   font-size: 1.05rem;
   font-weight: bold;
   /*text-transform: uppercase;*/
