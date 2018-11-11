@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"crossorigin="anonymous">
 	<link rel="stylesheet" href="ballot.css">
 	<link rel="stylesheet" href="style.css">
+	<style>
+		#facePreview {
+			width: 100%;
+			float: right;
+		}
+	</style>
 </head>
 <body>
 	<div class="container ballot">
@@ -28,15 +34,56 @@
 						<h6 class = "styling">Click Below to Generate a Passphrase:</h6>
 						<div class="form-row">
 							<div class="col">
-								<p></p>
-								<!--<input id = "oranges" class="form-control text-center passphrase"  type="text" placeholder="Authoization Key" readonly>-->
-								<!--<input type="text" class="form-control text-center passphrase" placeholder="Authorization Key">-->
+								<input type="text" class="form-control text-center passphrase" placeholder="Authorization Key">
 							</div>
 						</div>
 					</div>
 					<a class="btn btn-outline-dark landingButton generate-passphrase"> Generate Passphrase </a>
 				</form>
 			</div>
+			<div class='four wide column'>
+				<div class='ui fluid card'>
+					<div class='image'>
+						<video id='facePreview' autoplay></video>
+					</div>
+					<div class='content'>
+						<div class='header'>
+							Face Verify
+						</div>
+						<div class='description'>
+							<span class='status'>Please wait...</span>
+							<div class='ui error message' style='display:none'></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div> 
 	</div> 
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+	<script src='face-verify.js'></script>
+	<script>
+		var fv = new machinebox.FaceVerify({
+			facebox: "http://localhost:8080",
+			videoSelector: '#facePreview',
+			snapshotInterval: 1000,
+			error: function(error) {
+				if (!error) {
+					$('.ui.error.message').hide()
+					return
+				}
+				$('.ui.error.message').text(error).show()
+			},
+			onSecure: function(name){
+				$('.status').text("Welcome "+name)
+				$('.secure').css({backgroundColor:'white'})
+			},
+			onInsecure: function(message){
+				$('.status').text(message)
+				$('.secure').css({backgroundColor:'black'})
+			},
+		})
+		fv.start()
+	</script>
 </body>
