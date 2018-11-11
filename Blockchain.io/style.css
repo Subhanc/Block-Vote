@@ -9,13 +9,26 @@ body {
   padding-left: 5%;
 }
 
-
-
 .navbar {
   background-color: white;
   padding: 10px;
   font-size: 20px;
 
+}
+
+
+.nav-item {
+  font-size: 1.1rem;
+  padding-left: 60px;
+}
+
+.navbar {
+  background-color: white;
+  padding: 10px;
+}
+
+.navbar-nav {
+  padding-right: 130px;
 }
 
 .vote {
