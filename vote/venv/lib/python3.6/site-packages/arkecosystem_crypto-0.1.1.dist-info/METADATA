@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: arkecosystem-crypto
+Version: 0.1.1
+Summary: A simple Cryptography Implementation in Python for the ARK Blockchain.
+Home-page: https://github.com/ArkEcosystem/python-crypto
+Author: Ark Ecosystem
+Author-email: info@ark.io
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: base58
+Requires-Dist: binary-helpers
+Requires-Dist: coincurve
+Provides-Extra: dev
+Requires-Dist: base58; extra == 'dev'
+Requires-Dist: binary-helpers; extra == 'dev'
+Requires-Dist: coincurve; extra == 'dev'
+Requires-Dist: flake8 (>=3.5.0); extra == 'dev'
+Requires-Dist: flake8-import-order (>=0.17.1); extra == 'dev'
+Requires-Dist: flake8-print (>=3.1.0); extra == 'dev'
+Requires-Dist: flake8-quotes (>=1.0.0); extra == 'dev'
+Requires-Dist: pytest (>=3.6.1); extra == 'dev'
+Requires-Dist: pytest-cov (>=2.5.1); extra == 'dev'
+Provides-Extra: test
+Requires-Dist: flake8 (>=3.5.0); extra == 'test'
+Requires-Dist: flake8-import-order (>=0.17.1); extra == 'test'
+Requires-Dist: flake8-print (>=3.1.0); extra == 'test'
+Requires-Dist: flake8-quotes (>=1.0.0); extra == 'test'
+Requires-Dist: pytest (>=3.6.1); extra == 'test'
+Requires-Dist: pytest-cov (>=2.5.1); extra == 'test'
+
+UNKNOWN
+
+
