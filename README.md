@@ -3,10 +3,11 @@ Block chain voting system
 
 
 
-Facial Verification with FaceBox
+Sofiya Lysenko - Facial Verification with FaceBox 
 
 
 Subhan Chaudhry
 Rohan Shanbhag
+Sofiya Lysenko
 
 //insert names
