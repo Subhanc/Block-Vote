@@ -12,7 +12,10 @@
     align-items: center;
 }
 
+.power {
 
+    padding-right: 1000px;
+}
 .button { 
     color: black;
     background-color: #FFA500;

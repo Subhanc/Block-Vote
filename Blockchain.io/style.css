@@ -1,6 +1,5 @@
 body {
 	overflow-x: hidden; /*--right gutter fix--*/
-  font-family: 'Lucida Console';
   color: black;
   font-family: Avenir;
 
@@ -101,6 +100,11 @@ body {
   font-size: 0.7rem;
 }
 
+.power 
+{
+  padding-left: 85%;
+  opacity: 0.5;
+}
 .caption { 
   width: 100%;
   max-width: 100%;
