@@ -1,5 +1,5 @@
 # BlockVote
-Third Best Overall at Hack Princeton 
+Third Best Overall at Hack Princeton 2018
 https://devpost.com/software/block-vote
 
 Blockchain voting system
